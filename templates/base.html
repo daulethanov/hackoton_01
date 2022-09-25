@@ -1,0 +1,103 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https: //fonts.googleapis.com/css2?family= Roboto: семья= Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900 & display=swap"
+		rel="stylesheet">
+</head>
+<body>
+
+
+	<div class="vhod__position">
+		<div class="vhod__index">
+
+			<img src="{% static 'img/logoblack.png '%}" alt="logo">
+			 {% if request.user.is_authenticated %}
+			<input type="email" class="number form form__input" placeholder="mail">
+			<input type="password" class="password form form__input" placeholder="Пароль">
+			<button class="button__vhod form"><a href="{% url 'login' %}">Вход</a></button>
+			{% else %}
+			<a href="{% url 'register' %}" class="registr__spam form">Регестрация</a>
+			{% endif %}
+		</div>
+	</div>
+
+	<!-- Регестрация -->
+	<div class="registr__position">
+		<div class="registr__index">
+			<img src="{% static 'img/logoblack.png' %}" alt="logo">
+			<input type="tel" class="number form form__input" placeholder="Телефон">
+			<input type="tel" class="number form form__input" placeholder="ИИН">
+			<input type="email" class="number form form__input" placeholder="mail">
+			<input type="email" class="number form form__input" placeholder="Ф.И.О.">
+			<input type="password" class="password form form__input" placeholder="Пароль">
+			<button class="button__registr form">Регестрация</button>
+		</div>
+	</div>
+
+	<!-- шапка -->
+	<header class="header">
+		<div class="top">
+			<div class="burger__menu__button">
+				<span class="burger__line burger__line1"></span>
+				<span class="burger__line burger__line2"></span>
+				<span class="burger__line burger__line3"></span>
+				<span class="burger__line burger__line4"></span>
+			</div>
+			<div class="burger__content">
+				<nav>
+					<li>
+						<a href="#">
+							Профиль
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							Информация
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							Подать заявку
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							Статус
+						</a>
+					</li>
+				</nav>
+			</div>
+			<div>
+				<a href="../compege.html">
+					<img src="{% static 'img/logo.png '%}" alt="logo" class="logo">
+				</a>
+			</div>
+			<div class="vhod__icon">
+				<a href="#">Вход</a>
+			</div>
+
+		</div>
+	</header>
+
+	<!-- подвал -->
+	<footer>
+		<div>
+
+		</div>
+	</footer>
+
+	<script src="{% static 'js/podatzayvky.js' %}"></script>
+</body>
+</html>
+
+ {% if request.user.is_authenticated %} {{user.username}} | <a href="{% url 'logout' %}">Выйти</a>
+ {% else %}
+                <a href="{% url 'register' %}">Регистрация</a> | <a href="{% url 'login' %}">Войти</a>
+ {% endif %}

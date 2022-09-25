@@ -1,0 +1,308 @@
+body {
+	margin: 0px;
+	padding: 0px;
+}
+
+li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+
+.header {
+	width: 100%;
+	height: 100px;
+	background-color: black;
+	position: fixed;
+	top: 0;
+	z-index: 100;
+}
+
+.top {
+	width: 80%;
+	height: 100%;
+	margin: 0 auto;
+	position: relative;
+	display: flex;
+	padding-top: 25px;
+}
+
+.burger__menu__button {
+	position: relative;
+	width: 50px;
+	height: 40px;
+	cursor: pointer;
+	z-index: 110;
+}
+
+.burger__line {
+	position: absolute;
+	width: 100%;
+	height: 2px;
+	background-color: white;
+	left: 0;
+	display: block;
+	transition: 0.3s;
+}
+
+.burger__line1 {
+	top: 0;
+}
+
+.burger__line2 {
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.burger__line3 {
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.burger__line4 {
+	bottom: 0;
+}
+
+.burger__menu__button__active .burger__line1 {
+	display: none;
+}
+
+.burger__menu__button__active .burger__line2 {
+	transform: translateY(-50%) rotate(45deg);
+}
+
+.burger__menu__button__active .burger__line3 {
+	transform: translateY(-50%) rotate(-45deg);
+}
+
+.burger__menu__button__active .burger__line4 {
+	display: none;
+}
+
+.burger__content {
+	position: fixed;
+	width: 15%;
+	height: 100%;
+	background-color: black;
+	z-index: 100;
+	left: -100%;
+	transition: 0.3s;
+	line-height: 2;
+}
+
+.burger__content__active {
+	left: 0;
+}
+
+.burger__content nav {
+	width: 75%;
+	height: 200px;
+	margin: 0 auto;
+	margin-top: 30%;
+}
+
+.burger__content a {
+	font-size: 23px;
+	color: white;
+	z-index: 100;
+}
+
+.burger__content a:hover {
+	text-decoration: underline;
+}
+
+.burger__content a:active {
+	color: blue;
+}
+
+.logo {
+	position: absolute;
+	width: 250px;
+	height: 80px;
+	left: 50%;
+	transform: translateX(-50%);
+	top: 10px;
+}
+
+.vhod__icon {
+	position: absolute;
+	cursor: pointer;
+	right: 0;
+	top: 25%;
+}
+
+.vhod__icon a {
+	font-size: 25px;
+	color: white;
+}
+
+.vhod__icon a:hover {
+	text-decoration: underline;
+}
+
+.vhod__icon a:active {
+	color: blue;
+}
+
+/* вход */
+
+.vhod__position {
+	position: fixed;
+	width: 300px;
+	height: 320px;
+	border: solid 2px black;
+	left: 50%;
+	transform: translateX(-50%);
+	top: calc(50% - 160px);
+	z-index: 300;
+	border-radius: 15px;
+	text-align: center;
+	background-color: white;
+	top: -100%;
+	transition: 0.3s;
+}
+
+.vhod__position img {
+	width: 55%;
+	height: 70px;
+	margin-top: 10px;
+}
+
+.vhod__position__active {
+	top: calc(50% - 150px);
+	transition: 0.3s;
+}
+
+.form {
+	display: block;
+	margin-top: 30px;
+}
+
+.form__input {
+	width: 75%;
+	height: 30px;
+	border: none;
+	border-bottom: solid 2px black;
+	margin: 0 auto;
+	margin-top: 20px;
+	padding-left: 5px;
+}
+
+.button__vhod {
+	width: 50%;
+	height: 35px;
+	margin: 0 auto;
+	cursor: pointer;
+	border-radius: 15px;
+	margin-top: 30px;
+	font-size: 20px;
+	background-color: black;
+	color: white;
+}
+
+.button__vhod:hover {
+	border: solid 2px black;
+	background-color: white;
+	color: black;
+}
+
+.button__vhod:active {
+	background-color: black;
+	color: white;
+}
+
+.registr__spam {
+	font-size: 20px;
+	color: blue;
+}
+
+.registr:hover {
+	color: rgb(39, 2, 173);
+}
+
+.registr:active {
+	color: rgb(55, 0, 255);
+}
+
+/* регестрация */
+.registr__position {
+	position: fixed;
+	width: 300px;
+	height: 450px;
+	border: solid 2px black;
+	left: 50%;
+	transform: translateX(-50%);
+	top: calc(50% - 225px);
+	z-index: 300;
+	border-radius: 15px;
+	text-align: center;
+	background-color: white;
+	top: -100%;
+	transition: 0.3s;
+}
+
+.registr__position img {
+	width: 55%;
+	height: 70px;
+	margin-top: 10px;
+}
+
+.registr__position__active {
+	top: calc(50% - 150px);
+	transition: 0.3s;
+}
+
+.button__registr {
+	width: 50%;
+	height: 35px;
+	margin: 0 auto;
+	cursor: pointer;
+	border-radius: 15px;
+	margin-top: 30px;
+	font-size: 20px;
+	background-color: black;
+	color: white;
+}
+
+.button__registr:hover {
+	border: solid 2px black;
+	background-color: white;
+	color: black;
+}
+
+.button__registr:active {
+	background-color: black;
+	color: white;
+}
+
+/* форма */
+.content__position {
+	position: absolute;
+	width: 1000px;
+	height: 500px;
+	left: 50%;
+	transform: translateX(-50%);
+	top: calc(50% - 250px);
+	border: solid 3px black;
+	border-radius: 15px;
+}
+
+.content {
+	position: relative;
+}
+
+/* подвал */
+footer {
+	position: absolute;
+	width: 100%;
+	height: 100px;
+	background-color: black;
+	bottom: 0;
+}
+
+textarea {
+	resize: none;
+}

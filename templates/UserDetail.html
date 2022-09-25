@@ -1,12 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-
+{% extends 'base.html' %}
 {% block content %}
+
 
 <div class="attach clr clearfix ignore-select">
   <form method="post" enctype="multipart/form-data" >
@@ -21,18 +15,16 @@
 
          {% for d in detail %}
 
-                                                <a class="dl-item icon-l" href="" download="{{d.document.url}}" rel="nofollow">
-                                                    <div class="dl-title">
-                                                        <span class="fa fa-download"></span>
-                                                        Скачать Майнкрафт 1.19.40.22 (Бета)
-                                                    </div>
-                                                    <div>
-                                                        apk
-                                                        <span></span>
-                                                        <span>[165,4 Mb]</span>
-                                                        <span>(cкачиваний: 4879)</span>
-                                                    </div>
-                                                </a>
+    <div class="content__position">
+		<div class="content ">
+			<h2 class="">{{d.title}}</h2>
+			<input type="text">
+			<h2>{{d.description}}</h2>
+			<textarea name="" id="" cols="30" rows="10"></textarea>
+			<button>Загрузить</button>
+		</div>
+	</div>
+
 {% endfor %}
                                             </div>
 
